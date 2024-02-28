@@ -1,0 +1,18 @@
+<h2>por capital</h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <shared-shearch-box
+    (onValue)="searchByCapital($event)"
+    placeHolder="este es un nuevo placeHolder"></shared-shearch-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    <ul>
+      <countries-table [countries]="countries"></countries-table>
+    </ul>
+  </div>
+</div>
