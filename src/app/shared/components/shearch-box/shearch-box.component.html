@@ -1,7 +1,8 @@
+<!-- (keyup.enter)="emmitValue(txtInput.value)" -->
 <input
   type="text"
   [placeholder]="placeHolder"
   class="form-control"
-  (keyup.enter)="emmitValue(txtInput.value)"
+  (keyup)="onkeyPrees(txtInput.value)"
   #txtInput
 >

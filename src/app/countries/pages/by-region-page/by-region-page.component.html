@@ -1,11 +1,15 @@
 <h2>por region</h2>
 <hr>
 <div class="row">
-  <div class="col">
-    <shared-shearch-box
-      (onValue)="searchByRegion($event)"
-      placeHolder="este es un nuevo region"
-    ></shared-shearch-box>
+  <div class="col text-center">
+    <button  *ngFor="let region of regions"
+      class=" mx-1 btn"
+      [ngClass]="{'btn-outline-primary':selectedRegion === region}"
+      (click)="searchByRegion(region)"
+    >
+
+      {{region}}
+    </button>
   </div>
 </div>
 
@@ -17,3 +21,4 @@
     </ul>
   </div>
 </div>
+``

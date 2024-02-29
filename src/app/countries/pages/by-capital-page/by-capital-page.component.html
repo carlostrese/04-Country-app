@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col">
     <shared-shearch-box
-    (onValue)="searchByCapital($event)"
+    (onDebounce)="searchByCapital($event)"
     placeHolder="este es un nuevo placeHolder"></shared-shearch-box>
   </div>
 </div>
@@ -11,8 +11,8 @@
 <div class="row">
   <div class="col">
     <hr>
-    <ul>
-      <countries-table [countries]="countries"></countries-table>
-    </ul>
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+    <countries-table [countries]="countries"></countries-table>
+
   </div>
 </div>
